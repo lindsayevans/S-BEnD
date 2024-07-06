@@ -14,6 +14,10 @@
 [Data]
 ```
 
+Kinda like BEM, but with more emoji.<br>
+And scoping. And no `__`. And `data-` modifiers.<br>
+So, not really like BEM at all…
+
 ## OFFICIAL PRONUNCIATIONs
 
 - IPA: `/ʃaɪt/`
@@ -47,46 +51,42 @@
 ### PSEUDOCODE
 
 ```html
-<div class="💧∘myThing" data-theme="dark" data-state="active loading">
-  <h3 class="💧∘myThing_title">
+<div class="💧∘dunnyBlock" data-theme="dark" data-state="active loading">
+  <h3 class="💧∘dunnyBlock_title">
     This is My Thing
-    <i class="🧱/icon 💧∘myThing_titleIcon" data-shape="rounded">🚽</i>
+    <i class="🧱∘icon 💧∘dunnyBlock_titleIcon" data-shape="rounded">🚽</i>
   </h3>
 </div>
 ```
 
 ```scss
-// 🧱.css
-.🧱 {...}
-.🧱∘icon {...}
+.💧∘dunnyBlock {...}
 
-// 💧.css
-.💧 {...}
+.💧∘dunnyBlock_title {...}
 
-// 💧/MyThing.css
-.💧∘myThing {...}
+.💧∘dunnyBlock_titleIcon {...}
+.💧∘dunnyBlock_titleIcon[data-shape="rounded"] {...}
+.💧∘dunnyBlock_titleIcon[data-shape="circle"] {...}
 
-.💧∘myThing_title {...}
+.💧∘dunnyBlock[data-theme="light"] {...}
+.💧∘dunnyBlock[data-theme="dark"] {...}
+.💧∘dunnyBlock[data-state*="active"] {...}
+.💧∘dunnyBlock[data-state*="loading"] {...}
 
-.💧∘myThing_titleIcon {...}
-.💧∘myThing_titleIcon[data-shape="rounded"] {...}
-.💧∘myThing_titleIcon[data-shape="circle"] {...}
-
-.💧∘myThing[data-theme="light"] {...}
-.💧∘myThing[data-theme="dark"] {...}
-.💧∘myThing[data-state*="active"] {...}
-.💧∘myThing[data-state*="loading"] {...}
-
-.💧∘myThing[data-theme="dark"] {
-    .💧∘myThing_title {...}
-    .💧∘myThing_titleIcon {...}
+.💧∘dunnyBlock[data-theme="dark"] {
+    .💧∘dunnyBlock_title {...}
+    .💧∘dunnyBlock_titleIcon {...}
 }
 
 ```
 
-| Scope | BLock     | Elements               | Modifiers                                                                                                                                                       |
-| ----- | --------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `💧`  | `myThing` | `title`<br>`titleIcon` | `[data-shape="rounded"]`<br>`[data-shape="circle"]`<br>`[data-theme="light"]`<br>`[data-theme="dark"]`<br>`[data-state*="active"]`<br>`[data-state*="loading"]` |
+| Scope | BLock        | Elements               | Modifiers                                                                                                                                                       |
+| ----- | ------------ | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `💧`  | `dunnyBlock` | `title`<br>`titleIcon` | `[data-shape="rounded"]`<br>`[data-shape="circle"]`<br>`[data-theme="light"]`<br>`[data-theme="dark"]`<br>`[data-state*="active"]`<br>`[data-state*="loading"]` |
+
+### SUDOCODE
+
+I made an exmaple in [`./demo`](./demo/) for you to look at the coloured words or [click here](https://lindsayevans.github.io/S-BEnD/) if you like clicking on things
 
 ---
 

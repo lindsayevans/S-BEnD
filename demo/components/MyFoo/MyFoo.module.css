@@ -1,0 +1,50 @@
+/* Block */
+.myFoo {
+  padding: 20Q;
+  background-color: #e3e3e3;
+}
+
+/* Elements */
+.myFoo_title {
+  margin: 0 0 20Q;
+  font-weight: 400;
+  color: teal;
+}
+
+.myFoo_titleIcon {
+}
+
+.myFoo_titleIcon[data-shape='rounded'] {
+  border-radius: 0.25rem;
+}
+
+.myFoo_titleIcon[data-shape='circle'] {
+  border-radius: 50%;
+}
+
+/* Data Modifiers */
+.myFoo[data-state*='active'] {
+  outline: 4px solid salmon;
+  outline-offset: 2px;
+}
+
+.myFoo[data-state*='disabled'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.myFoo[data-theme*='light'] {
+  .myFoo_titleIcon {
+    background-color: rebeccapurple;
+    color: #ccc;
+  }
+}
+
+.myFoo[data-theme*='dark'] {
+  background-color: #333;
+  color: #fff;
+
+  .myFoo_titleIcon {
+    background-color: transparent;
+  }
+}

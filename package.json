@@ -1,0 +1,33 @@
+{
+  "name": "s-bend",
+  "version": "0.0.0",
+  "description": "S-BEnD",
+  "source": "demo/index.html",
+  "scripts": {
+    "start": "parcel demo/index.html",
+    "build": "parcel build demo/index.html",
+    "clean": "rm -rf dist && rm -rf .parcel-cache"
+  },
+  "@parcel/transformer-css": {
+    "cssModules": {
+      "pattern": "💧∘[local]"
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "parcel": "^2",
+    "postcss": "^8.4.38",
+    "postcss-modules": "^4.3.1",
+    "postcss-nesting": "^12.1.5",
+    "postcss-simple-vars": "^7.0.1",
+    "process": "^0.11.10",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74"
+}
